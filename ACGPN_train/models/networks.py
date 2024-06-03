@@ -946,7 +946,7 @@ class Vgg19(torch.nn.Module):
     def __init__(self, requires_grad=False):
         super(Vgg19, self).__init__()
         vgg = models.vgg19(pretrained=False)
-        vgg.load_state_dict(torch.load(os.path.dirname(os.path.realpath(__file__)) + "/vgg19-dcbb9e9d.pth"))
+        vgg.load_state_dict(torch.load(os.path.dirname("/kaggle/input/vgg19dcbb9e9dpth/vgg19-dcbb9e9d.pth"))
         vgg_pretrained_features = vgg.features
         self.vgg = vgg
         self.slice1 = torch.nn.Sequential()
